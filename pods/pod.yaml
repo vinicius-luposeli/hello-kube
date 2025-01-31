@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx
+  name: ngin-02
   labels:
-    app: nginx
+    app: myapp
     tier: frontend
 
 spec:
