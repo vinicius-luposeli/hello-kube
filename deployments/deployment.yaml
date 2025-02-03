@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: primeiro-deployment
+  labels:
+    app: myapp
+    tier: dev
+spec:
+  selector:
+    matchLabels:
+      app: myapp
+      tier: dev
+  replicas: 3
+  template:
+    metadata:
+      name: nginx
+      labels:
+        app: myapp
+        tier: dev
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx
